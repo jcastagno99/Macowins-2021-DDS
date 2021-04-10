@@ -35,7 +35,7 @@ object nueva {
  
     var valorPromocion
  
-    method asignarValorPromocion(valor){
+    method asignarValorPromocion(valor){   // Basicamente un setter, no se agregó al diagrama de clases.
       valorPromocion = valor;
       }
       
@@ -75,6 +75,7 @@ Class Venta {
     method calcularGanancias(unValor){
       return unValor;
       }
+      
   }
   
   
@@ -95,7 +96,9 @@ Class Venta {
   - Los estados de prenda "nueva" y "liquidacion" son siempre iguales, por eso son objects y no clases lo mismo con el método de pago "efectivo".
   - Se utilizó polimorfismo para calcular los precios segun el estado de cada prenda y tambien para calcular parte de las ganancias de una venta según
     su método de pago, de forma que se asignen correctamente las responsabilidades.
-  - Considero que la "fechaDeRealizacion" de una venta podria eliminarse, no se especifíca como requerimiento y no es de utilidad para ninguno de los mismos.
+  - Considero que la "fechaDeRealizacion" de una venta podria eliminarse, no se especifíca como requerimiento y no es de utilidad para ninguno de los mismos, al igual que 
+    "cantidadPrendasVendidas".
+  - El setter de "asignarValorPromocion(valorPromocion)" en la clase "Promocion" podria descartarse usando var     property, lo dejo para que sea mas explícito pero no es necesario.
   
 • Si se descarta alguna alternativa durante el desarrollo de la solución, o si se tiene otra solución, explicarla brevemente:
   
